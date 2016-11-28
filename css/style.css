@@ -183,13 +183,14 @@ a.sign {
   margin-top: 0.3em;
  }
 .banner{
-  background: url(../images/bg.jpg) no-repeat 0px 0px;
+  background: no-repeat 0px 0px;
+  background-image: url(../images/bg0.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  min-height: 722px;
+  min-height: 960px;
 }
 .banner-navigation {
   background-color: #2F3338;

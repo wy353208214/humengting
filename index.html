@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home</title>
+<title>胡梦婷&刘志新</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Wed Day Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -27,11 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="menu"></span>
 						<div class="top-menu">
 								<ul class="nav">
-									<li class="hvr-sweep-to-bottom cap"><a href="index.html">Home</a></li>
-									<li class="hvr-sweep-to-bottom"><a href="about.html">About</a></li>
-									<li class="hvr-sweep-to-bottom"><a href="typography.html">Services</a></li>
-									<li class="hvr-sweep-to-bottom"><a href="moments.html">Big Moments</a></li>
-									<li class="hvr-sweep-to-bottom"><a href="contact.html">Contact Us</a></li>
+									<li class="hvr-sweep-to-bottom cap"><a href="index.html">主页</a></li>
+									<li class="hvr-sweep-to-bottom"><a href="about.html">我们</a></li>
+									<li class="hvr-sweep-to-bottom"><a href="moments.html">回忆</a></li>
+									<li class="hvr-sweep-to-bottom"><a href="contact.html">举办地</a></li>
 								</ul>
 								<div class="clearfix"></div>
 						</div>
@@ -50,26 +49,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="rslides" id="slider4">
 							<li>
 								<div class="banner-info">
-									<h3>Michael <lable>&</lable> Annie</h3>
-									<p>Aug 30TH, 2015</p>
+									<h3>胡梦婷 <lable>&</lable> 刘志新</h3>
+									<h3>2016.12.12</h3>
 								</div>
 							</li>
 							<li>
 								<div class="banner-info">
-								
-									<h3>David <lable>&</lable> Mary</h3>
-									<p>Nov 10TH, 2015</p>
+									<h3>胡梦婷 <lable>&</lable> 刘志新</h3>
+									<h3>2016.12.12</h3>
 								</div>
 							</li>
 							<li>
 								<div class="banner-info">
-									<h3>Adams <lable>&</lable> Eve</h3>
-									<p>Mar 30TH, 2016</p>
+									<h3>胡梦婷 <lable>&</lable> 刘志新</h3>
+									<h3>2016.12.12</h3>
 								</div>								
 							</li>
 						 </ul>
 					</div>
-					<!--- banner Slider starts Here --->
+					<!--- banner Slider starts Here -->
 	  			<script src="js/responsiveslides.min.js"></script>
 			 <script>
 			    // You can also use "$(window).load(function() {"
@@ -82,16 +80,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			        speed: 500,
 			        namespace: "callbacks",
 			        before: function () {
-			          $('.events').append("<li>before event fired.</li>");
+			        	//动态切换图片			          
+			        	var bannerEle = $('.banner');
+		          		var absPath = bannerEle.css('background-image');
+		          		var index = absPath.slice(-7, -6);
+		          		if (index == 2) {
+		          			index = 0;
+		          		} else {
+		          			index++;
+		          		}
+		          		var bgImage = 'images/bg' + index + '.jpg';
+		          		bannerEle.css('background-image', "url(" + bgImage + ")");
 			        },
 			        after: function () {
-			          $('.events').append("<li>after event fired.</li>");
+			          // $('.events').append("<li>after event fired.</li>");
+
 			        }
 			      });
 			
 			    });
 			  </script>
-			<!----//End-slider-script---->
+			<!--//End-slider-script-->
 		</div>
 	</div>
 <!--//banner-->
